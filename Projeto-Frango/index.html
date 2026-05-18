@@ -3,8 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frango da Lú - O Melhor Frango Assado</title>
+    <title>Frango Assado da Lú</title>
+    <meta
+      name="description"
+      content="Frango assado artesanal, marmitas e bebidas com tempero especial. Peça pelo WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo"> 🍗Frango Assado da <span>Lú</span></a>
+        <ul class="nav-links" id="navlinks">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#menu">Cardápio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">⭐ A nº 1 do bairro</span>
+          <h1>O sabor que <span class="highlight">encanta</span></h1>
+          <p>
+            Frango assado artesanal, dourado e suculento, com aquele tempero de
+            casa. Peça agora e receba quentinho.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/5511999999999"
+              class="btn btn-priamry"
+              target="_blank"
+              rel="noopener"
+              >Pedir no WhatsApp</a
+            >
+            <a href="#cardapio" class="btn btn-ghost"> Ver Cardápio</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="Imagens/hero.jpg" alt="Frango assado dourado" />
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
