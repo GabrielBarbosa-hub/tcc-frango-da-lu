@@ -9,19 +9,19 @@
   --cinza-claro: #f5f5f7;
   --sombra: 0 8px 30px rgba(0, 0, 0, 0.08);
   --sombra-forte: 0 20px 50px rgba(214, 40, 40, 0.25);
-
-  * {
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
-  html {
+html {
   scroll-behavior: smooth;
-  }
+}
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--preto);
   background-color: var(--branco);
   line-height: 1.6;
