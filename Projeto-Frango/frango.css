@@ -1,0 +1,143 @@
+/* Frango Assado da Lú — estilo principal */
+:root {
+  --vermelho: #d62828;
+  --vermelho-escuro: #a51d1d;
+  --amarelo: #ffcc00;
+  --branco: #ffffff;
+  --preto: #1a1a1a;
+  --cinza: #6b7280;
+  --cinza-claro: #f5f5f7;
+  --sombra: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --sombra-forte: 0 20px 50px rgba(214, 40, 40, 0.25);
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  html {
+  scroll-behavior: smooth;
+  }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--preto);
+  background-color: var(--branco);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 0px 0;
+}
+
+/* Eyebrow / Section head */
+.eyebrow {
+  display: inline-block;
+  background-color: var(--amarelo);
+  color: var(--preto);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 50px;
+}
+.section-head h2 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--cinza);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--vermelho);
+  color: var(--branco);
+  box-shadow: var(--sombra-forte);
+}
+
+.btn-primary:hover {
+  background: var(--vermelho-escuro);
+  transform: translateY(-3px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+}
+
+.btn-ghost:hover {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  z-index: 999;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}

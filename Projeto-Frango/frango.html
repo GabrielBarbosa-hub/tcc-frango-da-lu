@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frango Assado da Lú</title>
+    <meta
+      name="description"
+      content="Frango assado artesanal, marmitas e bebidas com tempero especial. Peça pelo WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="frango.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo"> 🍗Frango Assado da <span>Lú</span></a>
+        <ul class="nav-links" id="navlinks">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#menu">Cardápio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">⭐ A nº 1 do bairro</span>
+          <h1>O sabor que <span class="highlight">encanta</span></h1>
+          <p>
+            Frango assado artesanal, dourado e suculento, com aquele tempero de
+            casa. Peça agora e receba quentinho.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/5511999999999"
+              class="btn btn-priamry"
+              target="_blank"
+              rel="noopener"
+              >Pedir no WhatsApp</a
+            >
+            <a href="#cardapio" class="btn btn-ghost"> Ver Cardápio</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="Imagens/hero.jpg" alt="Frango assado dourado" />
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+<!-- SOBRE -->
+<section class="section sobre" id="sobre">
+  <div class="container sobre-grid">
+    <div class="sobre-image">
+      <img src="Imagens/gal2.jpg" alt="Frango assado sendo preparado" />
+    </div>
+    <div class="sobre-text">
+      <span class="eyebrow">Nossa História</span>
+      <h2>Tradição e tempero de família</h2>
+      <p>
+        O <strong>Frango Assado da Lú</strong> nasceu em 2014, da paixão da Dona
+        Lú por reunir a família em volta da mesa. Cada frango é preparado com
+        tempero artesanal e assado na hora.
+      </p>
+      <p>
+        Hoje, continuamos a tradição de servir um frango suculento e cheio de
+        sabor, feito com carinho para nossos clientes. Venha provar o sabor que
+        conquistou o bairro!
+      </p>
+    </div>
+  </div>
+</section>
+<!-- CARDÁPIO -->
+<section class="section cardapio" id="cardapio">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nosso Cardápio</span>
+      <h2>Escolha o seu frango</h2>
+      <p>
+        Confira nossas opções de frango assado, com diferentes sabores e
+        acompanhamentos. Peça pelo WhatsApp!
+      </p>
+    </div>
+    <div class="filtros" id="filtros">
+      <button class="filtro-btn active" data-filtro="todos">Todos</button>
+      <button class="filtro-btn" data-filtro="frangos">Frangos</button>
+      <button class="filtro-btn" data-filtro="bebidas">Bebidas</button>
+    </div>
+    <div class="cards-grid" id="cardapioGrid"></div>
+  </div>
+</section>
+<!-- CONTATO -->
+<section class="section contato" id="contato">
+  <div class="container contato-grid">
+    <span class="contato-info">Fale com a gente!</span>
+    <h2>Faça seu pedido</h2>
+    <p>Atendemos aos sabados e domingos das 11h as 15h.</p>
+    <ul class="info-list">
+      <li>📍 Rua das Palmeiras, 123 — Centro</li>
+      <li>📞 (11) 99999-9999</li>
+      <li>✉️ contato@frangodalu.com.br</li>
+      <li>🕒 Ter–Dom · 11h às 15h</li>
+    </ul>
+  </div>
+  <form class="formulario" id="formContato" novalidate>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Seu nome completo"
+      />
+      <span class="erro" data-error="nome"></span>
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        placeholder="(51) 99999-9999"
+      />
+      <span class="erro" data-error="telefone"></span>
+    </div>
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <textarea
+        id="mensagem"
+        rows="4"
+        placeholder="Como podemos ajudar?"
+      ></textarea>
+      <span class="erro" data-error="mensagem"></span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">
+      Enviar Mensagem
+    </button>
+    <p class="form-sucesso" id="formSucesso">
+      Mesnsagem enviada com sucesso! Entraremos em contato em breve.
+    </p>
+  </form>
+  </div>
+  </section>
+</section>
+<!-- FOOTER -->
+
