@@ -11,152 +11,409 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="frango.css" />
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Menu principal">
       <div class="container nav-inner">
-        <a href="#home" class="logo"> 🍗Frango Assado da <span>Lú</span></a>
+        <a href="#home" class="logo">
+          <div class="logo-icon">
+            <img
+              src="Imagens/Image 5 7 de jun. de 2026, 18_59_20.png"
+              alt="Logo do Frango Assado"
+            />
+          </div>
+          <div class="logo-texto">
+            <span class="logo-frango">FRANGO</span>
+            <span class="logo-assado">ASSADO</span>
+          </div>
+        </a>
+
         <ul class="nav-links" id="navlinks">
-          <li><a href="#home">Início</a></li>
-          <li><a href="#menu">Cardápio</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#home" class="nav-active">INÍCIO</a></li>
+          <li><a href="#sobre">SOBRE</a></li>
+          <li><a href="#cardapio">CARDÁPIO</a></li>
+          <li><a href="#contato">FALE CONOSCO</a></li>
         </ul>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+
+        <a
+          href="https://wa.me/5551984255806"
+          class="btn-nav-pedir"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-whatsapp"></i> PEDIR AGORA
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
+
     <!-- HERO -->
     <header class="hero" id="home">
-      <div class="container hero-grid">
+      <div class="hero-bg">
+        <img
+          src="Imagens/Image 7 1 de jun. de 2026, 20_41_05.png"
+          alt="Frango assado dourado e suculento"
+          class="hero-bg-img"
+        />
+        <div class="hero-overlay"></div>
+        <div class="hero-torn-edge"></div>
+      </div>
+      <div class="container hero-content">
         <div class="hero-text">
-          <span class="badge">⭐ A nº 1 do bairro</span>
-          <h1>O sabor que <span class="highlight">encanta</span></h1>
-          <p>
-            Frango assado artesanal, dourado e suculento, com aquele tempero de
-            casa. Peça agora e receba quentinho.
+          <h1>O MELHOR <span class="highlight-yellow">FRANGO ASSADO</span></h1>
+          <p class="hero-sub">
+            Feito com tempero caseiro, entregue quentinho na sua porta.
           </p>
+          <div class="hero-badges">
+            <div class="hero-badge-item">
+              <i class="fa-solid fa-fire"></i>
+              <span>ASSADO NA <br />HORA</span>
+            </div>
+            <div class="hero-badge-item">
+              <i class="fa-solid fa-leaf"></i>
+              <span>TEMPERO <br />CASEIRO</span>
+            </div>
+            <div class="hero-badge-item">
+              <i class="fa-solid fa-map-marker-alt"></i>
+              <span>ATENDENDO TODA<br />A RESTINGA</span>
+            </div>
+          </div>
           <div class="hero-actions">
             <a
-              href="https://wa.me/5511999999999"
-              class="btn btn-priamry"
+              href="https://wa.me/5551984255806"
+              class="btn btn-yellow"
               target="_blank"
-              rel="noopener"
-              >Pedir no WhatsApp</a
+              rel="noopener noreferrer"
             >
-            <a href="#cardapio" class="btn btn-ghost"> Ver Cardápio</a>
+              <i class="fa-brands fa-whatsapp"></i> PEDIR PELO WHATSAPP
+            </a>
+            <a href="#contato" class="btn btn-dark">
+              <i class="fa-solid fa-phone"></i> LIGAR AGORA
+            </a>
           </div>
-        </div>
-        <div class="hero-image">
-          <img src="Imagens/hero.jpg" alt="Frango assado dourado" />
         </div>
       </div>
     </header>
+
+    <!-- CARDÁPIO -->
+    <section class="section cardapio" id="cardapio">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nosso Cardápio</span>
+          <h2>Escolha o seu combo</h2>
+          <p>Opções completas e saborosas para você e sua família.</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Linha 1: combos com imagem -->
+          <article class="card">
+            <div class="card-img">
+              <img
+                src="Imagens/Image 4 7 de jun. de 2026, 20_10_17.png"
+                alt="Combo Frango Inteiro"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Combo 1</h3>
+              <p class="card-desc">
+                Frango assado, polenta frita e salada de maionese. Perfeito para
+                2 a 3 pessoas.
+              </p>
+              <div class="card-footer">
+                <span class="preco">R$ 52,90</span>
+                <a
+                  href="https://wa.me/5551984255806"
+                  class="btn-pedir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img
+                src="Imagens/Image 2 7 de jun. de 2026, 20_10_29.png"
+                alt="Combo Meio Frango"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Combo 2</h3>
+              <p class="card-desc">
+                Frango assado, polenta frita, salada de maionese e um refri de
+                2L Charrua ou Fruki. Perfeito para 2 pessoas.
+              </p>
+              <div class="card-footer">
+                <span class="preco">R$ 57,90</span>
+                <a
+                  href="https://wa.me/5551984255806"
+                  class="btn-pedir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img
+                src="Imagens/Image 7 de jun. de 2026, 20_50_08.png"
+                alt="Combo Frango Picante"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Combo 3</h3>
+              <p class="card-desc">
+                Frango assado, polenta frita, salada de maionese, Coca-Cola 2L e
+                três cervejas polar latão. Perfeito para 3 pessoas.
+              </p>
+              <div class="card-footer">
+                <span class="preco">R$ 82,90</span>
+                <a
+                  href="https://wa.me/5551984255806"
+                  class="btn-pedir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img
+                src="Imagens/combo1.png"
+                alt="Frango assado polenta frita salada de maionese arroz e farofa"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Combo 4</h3>
+              <p class="card-desc">
+                Frango assado, polenta frita, salada de maionese, arroz e
+                farofa.
+              </p>
+              <div class="card-footer">
+                <span class="preco">57,90</span>
+                <a
+                  href="https://wa.me/5551984255806"
+                  class="btn-pedir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img
+                src="Imagens/combo2.png"
+                alt="frango assado inteiro polenta e batata frita salada de maionese coca cola lata"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Combo 5</h3>
+              <p class="card-desc">
+                Frango assado, polenta frita, batata frita, salada de maionese e
+                Coca Cola lata.
+              </p>
+              <div class="card-footer">
+                <span class="preco">58,90</span>
+                <a
+                  href="https://wa.me/5551984255806"
+                  class="btn-pedir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img
+                src="Imagens/combo3.png"
+                alt="frango assado inteiro polenta e batata frita salada de maionese coca cola lata cerveja polar lata"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Combo 6</h3>
+              <p class="card-desc">
+                Frango assado, polenta frita, salada de maionese, massa alho e
+                óleo e suco natural.
+              </p>
+              <div class="card-footer">
+                <span class="preco">59,90</span>
+                <a
+                  href="https://wa.me/5551984255806"
+                  class="btn-pedir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section sobre" id="sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-image">
+          <img
+            src="Imagens/df5603083212c1d8d570ab9d899d1f08.jpg"
+            alt="Frango assado sendo preparado com carinho"
+          />
+        </div>
+        <div class="sobre-text">
+          <span class="eyebrow">Nossa História</span>
+          <h2>O Verdadeiro Frango Assado</h2>
+          <p>
+            O <strong>Frango Assado da Lú</strong> começou de forma simples, com
+            a vontade de oferecer um frango assado saboroso, bem temperado e
+            preparado com atenção aos detalhes.
+          </p>
+          <p>
+            Ao longo dos anos, conquistamos a confiança dos clientes através da
+            qualidade dos nossos produtos e do atendimento próximo e familiar.
+            Nosso compromisso continua o mesmo: servir refeições gostosas, com
+            preço justo e muito carinho.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section contato" id="contato">
+      <div class="container">
+        <div class="contato-grid">
+          <div class="contato-info">
+            <span class="eyebrow">Fale conosco</span>
+            <h2>Faça seu pedido</h2>
+            <p>Atendemos aos sábados e domingos das 11h às 15h.</p>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Rua das Palmeiras, 123
+                — Centro
+              </li>
+              <li><i class="fa-solid fa-phone"></i> (51) 98425-5806</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i> contato@frangodalu.com.br
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i> Sábado–Domingo · 11h às 15h
+              </li>
+            </ul>
+          </div>
+          <form class="formulario" id="formContato" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+              />
+              <span class="erro" id="erro-nome"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(51) 99999-9999"
+                autocomplete="tel"
+              />
+              <span class="erro" id="erro-telefone"></span>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Como podemos ajudar?"
+              ></textarea>
+              <span class="erro" id="erro-mensagem"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+            </button>
+            <p class="form-sucesso" id="formSucesso">
+              ✅ Mensagem enviada! Entraremos em contato em breve.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img
+          src="Imagens/Image 5 7 de jun. de 2026, 18_59_20.png"
+          alt="Frango Assado da Lú"
+        />
+        <p>&copy; 2026 Frango Assado da Lú. Todos os direitos reservados.</p>
+        <div class="footer-social">
+          <a
+            href="https://wa.me/5551984255806"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/frango.assadodaluh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-<!-- SOBRE -->
-<section class="section sobre" id="sobre">
-  <div class="container sobre-grid">
-    <div class="sobre-image">
-      <img src="Imagens/gal2.jpg" alt="Frango assado sendo preparado" />
-    </div>
-    <div class="sobre-text">
-      <span class="eyebrow">Nossa História</span>
-      <h2>Tradição e tempero de família</h2>
-      <p>
-        O <strong>Frango Assado da Lú</strong> nasceu em 2014, da paixão da Dona
-        Lú por reunir a família em volta da mesa. Cada frango é preparado com
-        tempero artesanal e assado na hora.
-      </p>
-      <p>
-        Hoje, continuamos a tradição de servir um frango suculento e cheio de
-        sabor, feito com carinho para nossos clientes. Venha provar o sabor que
-        conquistou o bairro!
-      </p>
-    </div>
-  </div>
-</section>
-<!-- CARDÁPIO -->
-<section class="section cardapio" id="cardapio">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Nosso Cardápio</span>
-      <h2>Escolha o seu frango</h2>
-      <p>
-        Confira nossas opções de frango assado, com diferentes sabores e
-        acompanhamentos. Peça pelo WhatsApp!
-      </p>
-    </div>
-    <div class="filtros" id="filtros">
-      <button class="filtro-btn active" data-filtro="todos">Todos</button>
-      <button class="filtro-btn" data-filtro="frangos">Frangos</button>
-      <button class="filtro-btn" data-filtro="bebidas">Bebidas</button>
-    </div>
-    <div class="cards-grid" id="cardapioGrid"></div>
-  </div>
-</section>
-<!-- CONTATO -->
-<section class="section contato" id="contato">
-  <div class="container contato-grid">
-    <span class="contato-info">Fale com a gente!</span>
-    <h2>Faça seu pedido</h2>
-    <p>Atendemos aos sabados e domingos das 11h as 15h.</p>
-    <ul class="info-list">
-      <li>📍 Rua das Palmeiras, 123 — Centro</li>
-      <li>📞 (11) 99999-9999</li>
-      <li>✉️ contato@frangodalu.com.br</li>
-      <li>🕒 Ter–Dom · 11h às 15h</li>
-    </ul>
-  </div>
-  <form class="formulario" id="formContato" novalidate>
-    <div class="form-group">
-      <label for="nome">Nome</label>
-      <input
-        type="text"
-        id="nome"
-        name="nome"
-        placeholder="Seu nome completo"
-      />
-      <span class="erro" data-error="nome"></span>
-    </div>
-    <div class="form-group">
-      <label for="telefone">Telefone</label>
-      <input
-        type="tel"
-        id="telefone"
-        name="telefone"
-        placeholder="(51) 99999-9999"
-      />
-      <span class="erro" data-error="telefone"></span>
-    </div>
-    <div class="form-group">
-      <label for="mensagem">Mensagem</label>
-      <textarea
-        id="mensagem"
-        rows="4"
-        placeholder="Como podemos ajudar?"
-      ></textarea>
-      <span class="erro" data-error="mensagem"></span>
-    </div>
-    <button type="submit" class="btn btn-primary btn-block">
-      Enviar Mensagem
-    </button>
-    <p class="form-sucesso" id="formSucesso">
-      Mesnsagem enviada com sucesso! Entraremos em contato em breve.
-    </p>
-  </form>
-  </div>
-  </section>
-</section>
-<!-- FOOTER -->
-
