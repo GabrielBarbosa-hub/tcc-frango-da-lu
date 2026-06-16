@@ -751,12 +751,25 @@ button {
 }
 
 .footer-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 24px;
-  flex-wrap: wrap;
   width: 100%;
+}
+
+.footer-inner > img:first-child {
+  justify-self: center;
+}
+
+.footer-inner > p {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-social {
+  justify-self: center;
+  transform: translateX(150px);
 }
 
 /* Imagens do footer com tamanho uniforme */
@@ -777,7 +790,7 @@ button {
 }
 .footer-social {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 .footer-social a {
@@ -791,36 +804,10 @@ button {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.1rem;
   transition: var(--transicao);
+  transform: translateX(30px);
 }
 .footer-social a:hover {
   background: var(--vermelho);
-  color: var(--branco);
-  transform: translateY(-2px);
-}
-
-/* WHATSAPP FLUTUANTE */
-.whatsapp-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  background: #25d366;
-  color: var(--branco);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7rem;
-  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
-  z-index: 998;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-.whatsapp-float:hover {
-  transform: scale(1.12) translateY(-2px);
-  box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55);
   color: var(--branco);
 }
 
