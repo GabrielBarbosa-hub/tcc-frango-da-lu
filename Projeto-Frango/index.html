@@ -38,7 +38,9 @@
         </a>
 
         <ul class="nav-links" id="navlinks">
-          <li><a href="#home" class="nav-active">INÍCIO</a></li>
+          <li>
+            <a href="#home" class="nav-active" aria-current="page">INÍCIO</a>
+          </li>
           <li><a href="#sobre">SOBRE</a></li>
           <li><a href="#cardapio">CARDÁPIO</a></li>
           <li><a href="#contato">FALE CONOSCO</a></li>
@@ -50,7 +52,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fa-brands fa-whatsapp"></i> PEDIR AGORA
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> PEDIR AGORA
         </a>
 
         <button
@@ -58,6 +60,8 @@
           id="menuToggle"
           aria-label="Abrir menu"
           aria-expanded="false"
+          aria-controls="navlinks"
+          type="button"
         >
           <span></span><span></span><span></span>
         </button>
@@ -83,15 +87,15 @@
           </p>
           <div class="hero-badges">
             <div class="hero-badge-item">
-              <i class="fa-solid fa-fire"></i>
+              <i class="fa-solid fa-fire" aria-hidden="true"></i>
               <span>ASSADO NA <br />HORA</span>
             </div>
             <div class="hero-badge-item">
-              <i class="fa-solid fa-leaf"></i>
+              <i class="fa-solid fa-leaf" aria-hidden="true"></i>
               <span>TEMPERO <br />CASEIRO</span>
             </div>
             <div class="hero-badge-item">
-              <i class="fa-solid fa-map-marker-alt"></i>
+              <i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i>
               <span>ATENDENDO TODA<br />A RESTINGA</span>
             </div>
           </div>
@@ -102,290 +106,315 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fa-brands fa-whatsapp"></i> PEDIR PELO WHATSAPP
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> PEDIR
+              PELO WHATSAPP
             </a>
             <a href="#contato" class="btn btn-dark">
-              <i class="fa-solid fa-phone"></i> LIGAR AGORA
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> LIGAR AGORA
             </a>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- CARDÁPIO -->
-    <section class="section cardapio" id="cardapio">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Nosso Cardápio</span>
-          <h2>Escolha o seu combo</h2>
-          <p>Opções completas e saborosas para você e sua família.</p>
-        </div>
-
-        <div class="cards-grid">
-          <!-- Linha 1: combos com imagem -->
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="Imagens/Image 4 7 de jun. de 2026, 20_10_17.png"
-                alt="Combo Frango Inteiro"
-                loading="lazy"
-              />
-            </div>
-            <div class="card-body">
-              <h3>Combo 1</h3>
-              <p class="card-desc">
-                Frango assado, polenta frita e salada de maionese. Perfeito para
-                2 a 3 pessoas.
-              </p>
-              <div class="card-footer">
-                <span class="preco">R$ 52,90</span>
-                <a
-                  href="https://wa.me/5551984255806"
-                  class="btn-pedir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="Imagens/Image 2 7 de jun. de 2026, 20_10_29.png"
-                alt="Combo Meio Frango"
-                loading="lazy"
-              />
-            </div>
-            <div class="card-body">
-              <h3>Combo 2</h3>
-              <p class="card-desc">
-                Frango assado, polenta frita, salada de maionese e um refri de
-                2L Charrua ou Fruki. Perfeito para 2 pessoas.
-              </p>
-              <div class="card-footer">
-                <span class="preco">R$ 57,90</span>
-                <a
-                  href="https://wa.me/5551984255806"
-                  class="btn-pedir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="Imagens/Image 7 de jun. de 2026, 20_50_08.png"
-                alt="Combo Frango Picante"
-                loading="lazy"
-              />
-            </div>
-            <div class="card-body">
-              <h3>Combo 3</h3>
-              <p class="card-desc">
-                Frango assado, polenta frita, salada de maionese, Coca-Cola 2L e
-                três cervejas polar latão. Perfeito para 3 pessoas.
-              </p>
-              <div class="card-footer">
-                <span class="preco">R$ 82,90</span>
-                <a
-                  href="https://wa.me/5551984255806"
-                  class="btn-pedir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="Imagens/combo1.png"
-                alt="Frango assado polenta frita salada de maionese arroz e farofa"
-                loading="lazy"
-              />
-            </div>
-            <div class="card-body">
-              <h3>Combo 4</h3>
-              <p class="card-desc">
-                Frango assado, polenta frita, salada de maionese, arroz e
-                farofa.
-              </p>
-              <div class="card-footer">
-                <span class="preco">57,90</span>
-                <a
-                  href="https://wa.me/5551984255806"
-                  class="btn-pedir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="Imagens/combo2.png"
-                alt="frango assado inteiro polenta e batata frita salada de maionese coca cola lata"
-                loading="lazy"
-              />
-            </div>
-            <div class="card-body">
-              <h3>Combo 5</h3>
-              <p class="card-desc">
-                Frango assado, polenta frita, batata frita, salada de maionese e
-                Coca Cola lata.
-              </p>
-              <div class="card-footer">
-                <span class="preco">58,90</span>
-                <a
-                  href="https://wa.me/5551984255806"
-                  class="btn-pedir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="Imagens/combo3.png"
-                alt="frango assado inteiro polenta e batata frita salada de maionese coca cola lata cerveja polar lata"
-                loading="lazy"
-              />
-            </div>
-            <div class="card-body">
-              <h3>Combo 6</h3>
-              <p class="card-desc">
-                Frango assado, polenta frita, salada de maionese, massa alho e
-                óleo e suco natural.
-              </p>
-              <div class="card-footer">
-                <span class="preco">59,90</span>
-                <a
-                  href="https://wa.me/5551984255806"
-                  class="btn-pedir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="section sobre" id="sobre">
-      <div class="container sobre-grid">
-        <div class="sobre-image">
-          <img
-            src="Imagens/df5603083212c1d8d570ab9d899d1f08.jpg"
-            alt="Frango assado sendo preparado com carinho"
-          />
-        </div>
-        <div class="sobre-text">
-          <span class="eyebrow">Nossa História</span>
-          <h2>O Verdadeiro Frango Assado</h2>
-          <p>
-            O <strong>Frango Assado da Lú</strong> começou de forma simples, com
-            a vontade de oferecer um frango assado saboroso, bem temperado e
-            preparado com atenção aos detalhes.
-          </p>
-          <p>
-            Ao longo dos anos, conquistamos a confiança dos clientes através da
-            qualidade dos nossos produtos e do atendimento próximo e familiar.
-            Nosso compromisso continua o mesmo: servir refeições gostosas, com
-            preço justo e muito carinho.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section class="section contato" id="contato">
-      <div class="container">
-        <div class="contato-grid">
-          <div class="contato-info">
-            <span class="eyebrow">Fale conosco</span>
-            <h2>Faça seu pedido</h2>
-            <p>Atendemos aos sábados e domingos das 11h às 15h.</p>
-            <ul class="info-list">
-              <li>
-                <i class="fa-solid fa-location-dot"></i> Rua das Palmeiras, 123
-                — Centro
-              </li>
-              <li><i class="fa-solid fa-phone"></i> (51) 98425-5806</li>
-              <li>
-                <i class="fa-solid fa-envelope"></i> contato@frangodalu.com.br
-              </li>
-              <li>
-                <i class="fa-solid fa-clock"></i> Sábado–Domingo · 11h às 15h
-              </li>
-            </ul>
+    <main>
+      <!-- CARDÁPIO -->
+      <section
+        class="section cardapio"
+        id="cardapio"
+        aria-labelledby="cardapio-titulo"
+      >
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Nosso Cardápio</span>
+            <h2 id="cardapio-titulo">Escolha o seu combo</h2>
+            <p>Opções completas e saborosas para você e sua família.</p>
           </div>
-          <form class="formulario" id="formContato" novalidate>
-            <div class="form-group">
-              <label for="nome">Nome</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Seu nome completo"
-                autocomplete="name"
-              />
-              <span class="erro" id="erro-nome"></span>
-            </div>
-            <div class="form-group">
-              <label for="telefone">Telefone</label>
-              <input
-                type="tel"
-                id="telefone"
-                name="telefone"
-                placeholder="(51) 99999-9999"
-                autocomplete="tel"
-              />
-              <span class="erro" id="erro-telefone"></span>
-            </div>
-            <div class="form-group">
-              <label for="mensagem">Mensagem</label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                rows="4"
-                placeholder="Como podemos ajudar?"
-              ></textarea>
-              <span class="erro" id="erro-mensagem"></span>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
-            </button>
-            <p class="form-sucesso" id="formSucesso">
-              ✅ Mensagem enviada! Entraremos em contato em breve.
-            </p>
-          </form>
+
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="Imagens/Image 4 7 de jun. de 2026, 20_10_17.png"
+                  alt="Combo Frango Inteiro"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Combo 1</h3>
+                <p class="card-desc">
+                  Frango assado, polenta frita e salada de maionese. Perfeito
+                  para 2 a 3 pessoas.
+                </p>
+                <div class="card-footer">
+                  <span class="preco">R$ 52,90</span>
+                  <a
+                    href="https://wa.me/5551984255806"
+                    class="btn-pedir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Pedir
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="Imagens/Image 2 7 de jun. de 2026, 20_10_29.png"
+                  alt="Combo Meio Frango"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Combo 2</h3>
+                <p class="card-desc">
+                  Frango assado, polenta frita, salada de maionese e um refri de
+                  2L Charrua ou Fruki. Perfeito para 2 pessoas.
+                </p>
+                <div class="card-footer">
+                  <span class="preco">R$ 57,90</span>
+                  <a
+                    href="https://wa.me/5551984255806"
+                    class="btn-pedir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Pedir
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="Imagens/Image 7 de jun. de 2026, 20_50_08.png"
+                  alt="Combo Frango Picante"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Combo 3</h3>
+                <p class="card-desc">
+                  Frango assado, polenta frita, salada de maionese, Coca-Cola 2L
+                  e três cervejas polar latão. Perfeito para 3 pessoas.
+                </p>
+                <div class="card-footer">
+                  <span class="preco">R$ 82,90</span>
+                  <a
+                    href="https://wa.me/5551984255806"
+                    class="btn-pedir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Pedir
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="Imagens/combo1.png"
+                  alt="Frango assado, polenta frita, salada de maionese, arroz e farofa"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Combo 4</h3>
+                <p class="card-desc">
+                  Frango assado, polenta frita, salada de maionese, arroz e
+                  farofa.
+                </p>
+                <div class="card-footer">
+                  <span class="preco">R$ 57,90</span>
+                  <a
+                    href="https://wa.me/5551984255806"
+                    class="btn-pedir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Pedir
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="Imagens/combo2.png"
+                  alt="Frango assado inteiro, polenta e batata frita, salada de maionese, Coca-Cola lata"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Combo 5</h3>
+                <p class="card-desc">
+                  Frango assado, polenta frita, batata frita, salada de maionese
+                  e Coca Cola lata.
+                </p>
+                <div class="card-footer">
+                  <span class="preco">R$ 58,90</span>
+                  <a
+                    href="https://wa.me/5551984255806"
+                    class="btn-pedir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Pedir
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="Imagens/combo3.png"
+                  alt="Frango assado inteiro, polenta e batata frita, salada de maionese, Coca-Cola lata, cerveja polar lata"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Combo 6</h3>
+                <p class="card-desc">
+                  Frango assado, polenta frita, salada de maionese, massa alho e
+                  óleo e suco natural.
+                </p>
+                <div class="card-footer">
+                  <span class="preco">R$ 59,90</span>
+                  <a
+                    href="https://wa.me/5551984255806"
+                    class="btn-pedir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Pedir
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- SOBRE -->
+      <section class="section sobre" id="sobre" aria-labelledby="sobre-titulo">
+        <div class="container sobre-grid">
+          <div class="sobre-image">
+            <img
+              src="Imagens/df5603083212c1d8d570ab9d899d1f08.jpg"
+              alt="Frango assado sendo preparado com carinho"
+            />
+          </div>
+          <div class="sobre-text">
+            <span class="eyebrow">Nossa História</span>
+            <h2 id="sobre-titulo">O Verdadeiro Frango Assado</h2>
+            <p>
+              O <strong>Frango Assado da Lú</strong> começou de forma simples,
+              com a vontade de oferecer um frango assado saboroso, bem temperado
+              e preparado com atenção aos detalhes.
+            </p>
+            <p>
+              Ao longo dos anos, conquistamos a confiança dos clientes através
+              da qualidade dos nossos produtos e do atendimento próximo e
+              familiar. Nosso compromisso continua o mesmo: servir refeições
+              gostosas, com preço justo e muito carinho.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section
+        class="section contato"
+        id="contato"
+        aria-labelledby="contato-titulo"
+      >
+        <div class="container">
+          <div class="contato-grid">
+            <div class="contato-info">
+              <span class="eyebrow">Fale conosco</span>
+              <h2 id="contato-titulo">Faça seu pedido</h2>
+              <p>Atendemos aos sábados e domingos das 11h às 15h.</p>
+              <ul class="info-list">
+                <li>
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Rua Maria Alice 265 - Restinga Nova
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  (51) 98425-5806
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  contato@frangodalu.com.br
+                </li>
+                <li>
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                  Sábado–Domingo · 11h às 15h
+                </li>
+              </ul>
+            </div>
+            <form class="formulario" id="formContato" novalidate>
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  aria-describedby="erro-nome"
+                />
+                <span class="erro" id="erro-nome" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(51) 99999-9999"
+                  autocomplete="tel"
+                  aria-describedby="erro-telefone"
+                />
+                <span class="erro" id="erro-telefone" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="4"
+                  placeholder="Como podemos ajudar?"
+                  aria-describedby="erro-mensagem"
+                ></textarea>
+                <span class="erro" id="erro-mensagem" role="alert"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                Enviar Mensagem
+              </button>
+              <p class="form-sucesso" id="formSucesso" role="status">
+                ✅ Mensagem enviada! Entraremos em contato em breve.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -403,7 +432,7 @@
             rel="noopener noreferrer"
             aria-label="WhatsApp"
           >
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
           </a>
           <a
             href="https://www.instagram.com/frango.assadodaluh/"
@@ -411,10 +440,12 @@
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </footer>
+
+    <script src="frango.js"></script>
   </body>
 </html>

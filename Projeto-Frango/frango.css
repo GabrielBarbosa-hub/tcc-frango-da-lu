@@ -1,8 +1,10 @@
 /* =====================================================
    Frango Assado da Lú — frango.css
+   Arquitetura: Reset / Variáveis / Layout / Header /
+   Hero / Cards / Seções / Footer / Media Queries
    ===================================================== */
 
-/* VARIÁVEIS */
+/* ===== VARIÁVEIS ===== */
 :root {
   --vermelho: #d62828;
   --vermelho-escuro: #a51d1d;
@@ -20,15 +22,13 @@
   --transicao: all 0.3s ease;
 }
 
-/* RESET */
+/* ===== RESET ===== */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
 }
 
 html {
@@ -47,6 +47,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 a {
@@ -64,7 +65,7 @@ button {
   background: none;
 }
 
-/* LAYOUT */
+/* ===== LAYOUT ===== */
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -165,7 +166,7 @@ button {
 }
 
 /* ====================================================
-   NAVBAR
+   HEADER (NAVBAR)
 ==================================================== */
 .navbar {
   position: absolute;
@@ -206,7 +207,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4vw;
+  flex-shrink: 0;
+}
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .logo-texto {
   display: flex;
@@ -230,7 +236,7 @@ button {
 /* Links de navegação */
 .nav-links {
   display: flex;
-  align-items: flex;
+  align-items: center;
   gap: 40px;
   flex: 1;
   justify-content: flex-end;
@@ -364,7 +370,7 @@ button {
   justify-content: flex-end;
   padding-top: 100px;
   padding-bottom: 90px;
-  padding-left: 200px;
+  width: 100%;
 }
 
 .hero-text {
@@ -374,7 +380,6 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: start;
-  transform: translateX(250px);
 }
 
 /* Título principal */
@@ -392,7 +397,6 @@ button {
 .highlight-yellow {
   font-size: 3.6rem;
   color: var(--vermelho);
-  justify-content: flex-end;
   font-weight: 900;
   line-height: 1em;
   padding-left: 3px;
@@ -420,7 +424,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 5vw;
+  min-width: 80px;
   text-align: center;
 }
 
@@ -454,7 +458,7 @@ button {
 }
 
 /* ====================================================
-   CARDÁPIO
+   CARDS (CARDÁPIO)
 ==================================================== */
 .cardapio {
   background: var(--cinza-claro);
@@ -462,9 +466,11 @@ button {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 32px;
   align-items: stretch;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 /* Card */
@@ -596,7 +602,7 @@ button {
 }
 
 /* ====================================================
-   SOBRE
+   SEÇÕES — SOBRE
 ==================================================== */
 .sobre {
   background: var(--branco);
@@ -613,6 +619,9 @@ button {
   aspect-ratio: 4/5;
   object-fit: cover;
   width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  display: block;
 }
 .sobre-text h2 {
   font-size: 43px;
@@ -631,7 +640,7 @@ button {
 }
 
 /* ====================================================
-   CONTATO
+   SEÇÕES — CONTATO
 ==================================================== */
 .contato {
   background: var(--cinza-claro);
@@ -639,7 +648,8 @@ button {
 .contato-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
+  align-items: center;
+  gap: 48px;
 }
 .contato-info h2 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
@@ -653,12 +663,11 @@ button {
   line-height: 1.7;
 }
 .info-list li {
-  display: flex-start;
+  display: flex;
   align-items: flex-start;
   gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--cinza-borda);
-
   font-weight: 500;
   font-size: 0.95rem;
 }
@@ -669,16 +678,16 @@ button {
   color: var(--vermelho);
   width: 18px;
   flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .formulario {
-  margin-top: -50px;
-  margin-left: 90px;
   background: var(--branco);
   padding: 36px;
   border-radius: var(--raio-lg);
   box-shadow: var(--sombra);
   border: 1px solid var(--cinza-borda);
+  width: 100%;
 }
 .form-group {
   margin-bottom: 20px;
@@ -760,24 +769,14 @@ button {
 
 .footer-inner > img:first-child {
   justify-self: center;
+  height: 64px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-inner > p {
   text-align: center;
   margin: 0;
-}
-
-.footer-social {
-  justify-self: center;
-  transform: translateX(150px);
-}
-
-/* Imagens do footer com tamanho uniforme */
-.footer-inner > img {
-  height: 64px;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
 }
 
 .footer-logo {
@@ -788,10 +787,17 @@ button {
 .footer-logo span {
   color: var(--vermelho);
 }
+
 .footer-social {
+  justify-self: end;
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.footer-social img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
 }
 .footer-social a {
   display: flex;
@@ -804,7 +810,6 @@ button {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.1rem;
   transition: var(--transicao);
-  transform: translateX(30px);
 }
 .footer-social a:hover {
   background: var(--vermelho);
@@ -824,29 +829,73 @@ button {
 }
 
 /* ====================================================
-   RESPONSIVIDADE
+   MEDIA QUERIES
+   Layout fluido com Flexbox, Grid, clamp() e min/max.
+   Breakpoints organizados do maior para o menor.
 ==================================================== */
-@media (max-width: 880px) {
-  .section {
-    padding: 60px 0;
+
+/* Contraste do hambúrguer sobre o hero (navbar transparente) */
+.navbar:not(.scrolled) .menu-toggle span {
+  background: var(--amarelo);
+}
+
+/* ────────────────────────────────────────────────────
+   NOTEBOOKS GRANDES (≤ 1536px)
+   Cobre 1440px e 1536px.
+──────────────────────────────────────────────────── */
+@media (max-width: 1536px) {
+  .nav-inner {
+    max-width: 1600px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   NOTEBOOKS E DESKTOPS MENORES (≤ 1366px)
+   Cobre 1280px e 1366px sem alterar o design,
+   apenas reduz levemente respiros em telas mais
+   estreitas que o "ideal" de 1400-1700px.
+──────────────────────────────────────────────────── */
+@media (max-width: 1366px) {
+  .nav-inner {
+    padding: 0 32px;
+    gap: 28px;
+  }
+  .hero-text {
+    max-width: 580px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   TABLETS GRANDES E LAPTOPS PEQUENOS (≤ 1024px)
+   Cobre 912px, 1024px.
+   O menu hambúrguer assume aqui: a navbar completa
+   (logo + 4 links + botão "Pedir Agora") só cabe
+   com folga a partir de ~1040px, então o hambúrguer
+   precisa cobrir toda a faixa de tablets.
+──────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .nav-inner {
+    padding: 0 24px;
+    gap: 20px;
   }
 
   .btn-nav-pedir {
     display: none;
   }
+
   .menu-toggle {
     display: flex;
   }
 
   .nav-links {
     position: absolute;
-    top: 76px;
+    top: 78px;
     left: 0;
     right: 0;
     background: var(--branco);
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px 24px 24px;
+    padding: 16px 20px 24px;
     gap: 4px;
     box-shadow: var(--sombra-media);
     border-top: 1px solid var(--cinza-borda);
@@ -856,72 +905,375 @@ button {
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
+    z-index: 998;
   }
+
   .nav-links.open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
   }
+
   .nav-links a {
     width: 100%;
     padding: 10px 12px;
+    color: var(--preto);
   }
 
+  .hero-text {
+    max-width: 520px;
+  }
+
+  .sobre-grid {
+    gap: 40px;
+  }
+
+  .contato-grid {
+    gap: 32px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   TABLETS (≤ 880px)
+   Cobre 768px, 820px, 834px.
+   Hero centraliza, navbar reduz altura/logo.
+──────────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Navbar */
+  .nav-inner {
+    padding: 0 20px;
+    gap: 12px;
+    height: 68px;
+  }
+
+  .nav-links {
+    top: 68px;
+  }
+
+  .logo-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-frango,
+  .logo-assado {
+    font-size: 0.92rem;
+  }
+
+  /* Hero */
   .hero-content {
     justify-content: center;
-    padding-top: 110px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
+
   .hero-text {
     text-align: center;
     max-width: 100%;
+    align-items: center;
   }
+
+  .hero-text h1,
+  .highlight-yellow {
+    font-size: 2.6rem;
+  }
+
+  .hero-sub {
+    font-size: 0.98rem;
+    padding: 8px 0;
+  }
+
+  .hero-badge-item {
+    min-width: 72px;
+  }
+
   .hero-badges {
-    justify-content: center;
-  }
-  .hero-actions {
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Cardápio: 2 colunas */
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
-  .sobre-grid,
+  /* Sobre */
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .sobre-text h2 {
+    font-size: 2rem;
+  }
+
+  /* Contato */
   .contato-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 
   .formulario {
-    padding: 24px 20px;
-    margin-top: 0;
-    margin-left: 0;
+    padding: 28px 20px;
   }
+
+  /* Footer */
+  .footer {
+    padding: 36px 0 24px;
+  }
+
   .footer-inner {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
-    gap: 16px;
+    gap: 20px;
   }
-  .footer-inner > img {
-    height: 48px;
+
+  .footer-inner > img:first-child {
+    height: 52px;
+  }
+
+  .footer-social {
+    justify-self: center;
   }
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
+/* ────────────────────────────────────────────────────
+   SMARTPHONES GRANDES (≤ 600px)
+   Cobre 600px e telas intermediárias logo abaixo
+   do breakpoint de tablet.
+──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .footer-inner > img {
+
+  .hero-text h1,
+  .highlight-yellow {
+    font-size: 2.1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-badges {
+    gap: 14px;
+  }
+
+  .hero-badge-item {
+    min-width: 64px;
+  }
+
+  .hero-badge-item i {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+
+  .formulario {
+    padding: 20px 16px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-pedir {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   SMARTPHONES PADRÃO (≤ 480px)
+   Cobre 390px, 412px, 414px, 430px, 480px.
+──────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-frango,
+  .logo-assado {
+    font-size: 0.82rem;
+  }
+
+  .hero-text h1,
+  .highlight-yellow {
+    font-size: clamp(1.7rem, 8vw, 1.9rem);
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+
+  .hero-badges {
+    gap: 10px;
+  }
+
+  .hero-badge-item span {
+    font-size: 0.62rem;
+  }
+
+  .section-head {
+    margin-bottom: 36px;
+  }
+
+  .sobre-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer-inner > img:first-child {
+    height: 42px;
+  }
+
+  .footer-inner {
+    gap: 14px;
+  }
+
+  .footer-social img {
+    height: 32px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   SMARTPHONES PEQUENOS (≤ 375px)
+   Cobre 320px, 360px, 375px.
+──────────────────────────────────────────────────── */
+@media (max-width: 375px) {
+  .nav-inner {
+    padding: 0 14px;
+  }
+
+  .hero-text h1,
+  .highlight-yellow {
+    font-size: 1.55rem;
+  }
+
+  .hero-badge-item {
+    min-width: 56px;
+  }
+
+  .hero-badge-item i {
+    width: 40px;
     height: 40px;
+    font-size: 1rem;
+  }
+
+  .hero-badge-item span {
+    font-size: 0.58rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 12px 20px;
+  }
+
+  .card-body {
+    padding: 16px 16px 18px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   MONITORES GRANDES (≥ 1600px)
+   Cobre 1600px e 1920px, mantendo o conteúdo
+   proporcional sem alterar a identidade visual.
+──────────────────────────────────────────────────── */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .nav-inner {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1700px;
+  }
+
+  .nav-inner {
+    max-width: 1900px;
+  }
+
+  .hero-text {
+    max-width: 680px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   2K / 4K (≥ 2560px)
+   Evita que o conteúdo fique diluído demais em
+   monitores 2K e 4K.
+──────────────────────────────────────────────────── */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1900px;
+  }
+
+  .nav-inner {
+    max-width: 2100px;
+  }
+
+  .hero-text {
+    max-width: 760px;
+  }
+}
+
+/* ────────────────────────────────────────────────────
+   ULTRAWIDE (≥ 3440px)
+   Limita a dispersão do conteúdo em monitores
+   ultrawide, mantendo a composição original do hero
+   e da navbar centralizados.
+──────────────────────────────────────────────────── */
+@media (min-width: 3440px) {
+  .container {
+    max-width: 2200px;
+  }
+
+  .nav-inner {
+    max-width: 2400px;
+  }
+
+  .hero-text {
+    max-width: 820px;
   }
 }
