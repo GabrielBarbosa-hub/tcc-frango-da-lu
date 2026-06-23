@@ -639,6 +639,36 @@ button {
   font-weight: 700;
 }
 
+/* Selo discreto de impacto social (ODS 2, 8 e 11) */
+.impacto-list {
+  display: flex;
+  gap: 28px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--cinza-borda);
+  flex-wrap: wrap;
+}
+.impacto-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 140px;
+}
+.impacto-item img {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.impacto-item span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--cinza);
+}
+
 /* ====================================================
    SEÇÕES — CONTATO
 ==================================================== */
@@ -793,11 +823,16 @@ button {
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 100%;
 }
 .footer-social img {
-  height: 38px;
-  width: auto;
+  height: auto;
+  width: 100%;
+  max-width: 160px;
   object-fit: contain;
+  flex-shrink: 1;
 }
 .footer-social a {
   display: flex;
@@ -805,6 +840,8 @@ button {
   justify-content: center;
   width: 38px;
   height: 38px;
+  min-width: 38px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.75);
@@ -1023,6 +1060,16 @@ button {
     font-size: 2rem;
   }
 
+  .impacto-list {
+    justify-content: center;
+    text-align: center;
+  }
+  .impacto-item {
+    flex-direction: column;
+    gap: 8px;
+    min-width: 100px;
+  }
+
   /* Contato */
   .contato-grid {
     grid-template-columns: 1fr;
@@ -1051,6 +1098,12 @@ button {
 
   .footer-social {
     justify-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .footer-social img {
+    max-width: 140px;
   }
 }
 
@@ -1168,7 +1221,7 @@ button {
   }
 
   .footer-social img {
-    height: 32px;
+    max-width: 120px;
   }
 }
 
